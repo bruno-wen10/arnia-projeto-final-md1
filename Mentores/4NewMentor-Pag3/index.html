@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag New Mentores 2</title>
+    
+    <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="idMentorClass" class="classFraseMentor">
+
+            <div><img src="mentorclass.png" alt=""></div>
+
+            <div id="idMenuMentores" class="MenuMentores">
+                <i class="fa-regular fa-user fa-2xl"></i>
+                <div id="mentores">Mentorea</div>
+            </div>
+
+            <div id="idMenuMentorias" class="MenuMentorias">
+                <i class="fa-solid fa-chalkboard fa-2xl"></i>
+                <div id="mentorias">Mentorias</div>
+
+            </div>
+
+            <div id="idMenuTurmas" class="MenuTurmas">
+
+                <i class="fa-regular fa-circle-play fa-2xl"></i>
+                <div id="turmas">Turmas</div>
+            </div>
+
+            <div id="idAlunos" class="MenuAlunos">
+
+                <i class="fa-solid fa-users fa-2xl"></i>
+                <div id="alunos">Alunos</div>
+
+            </div>
+            
+
+        </div>  
+
+        <div id="idCabecalho" class="cabecalho">
+                                
+                <div class="cabecalho-Icone">
+                 <i  class="fa-solid fa-circle-user fa-2xl"></i>
+                 <div>Bruno Wener de Sousa</div>
+                </div>
+                
+                
+                <div>augusto@gmail.com</div>
+                
+        </div>
+
+        <div class="novoMembro">
+            
+            <i onclick="addNewMembro()" class="fa-solid fa-circle-arrow-left fa-2xl" style="color: rgba(99, 99, 99, 0.178);"></i>
+            <h1>Novo Mentor</h1>
+        </div>
+
+        <div id="idContainerTabela" class="containerTabela">
+
+            <div class="dados">
+                <span onclick="dados()" >Dados</span> 
+            </div>
+            <hr class="separator">
+
+            <div id="idInput's" class="Inputs">
+
+                <div id="idDivImput1" class="classDivInput">
+
+                    <label for="Nome">Nome</label>
+                    <input type="text" name="Nome" class="labelInput" placeholder="Digite seu nome...">
+                    
+
+                </div>
+
+                <div id="idImput2" class="classDivInput">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="labelInput" placeholder="Digite seu E-mail...">
+
+                </div>
+                
+
+            </div>
+
+            <div class="classDivButton">
+                <button onclick="salvar()">Salvar</button>
+            </div>
+         
+                         
+                
+            
+        </div>
+
+
+        
+
+    </div>
+</body>
+</html>

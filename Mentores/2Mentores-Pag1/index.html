@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag Mentores 1</title>
+    
+    <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="idMentorClass" class="classFraseMentor">
+
+            <div><img src="mentorclass.png" alt=""></div>
+
+            <div id="idMenuMentores" class="MenuMentores">
+                <i class="fa-regular fa-user fa-2xl"></i>
+                <div id="mentores">Mentorea</div>
+            </div>
+
+            <div id="idMenuMentorias" class="MenuMentorias">
+                <i class="fa-solid fa-chalkboard fa-2xl"></i>
+                <div id="mentorias">Mentorias</div>
+
+            </div>
+
+            <div id="idMenuTurmas" class="MenuTurmas">
+
+                <i class="fa-regular fa-circle-play fa-2xl"></i>
+                <div id="turmas">Turmas</div>
+            </div>
+
+            <div id="idAlunos" class="MenuAlunos">
+
+                <i class="fa-solid fa-users fa-2xl"></i>
+                <div id="alunos">Alunos</div>
+
+            </div>
+            
+
+        </div>  
+
+        <div id="idCabecalho" class="cabecalho">
+                                
+                <div class="cabecalho-Icone">
+                 <i  class="fa-solid fa-circle-user fa-2xl"></i>
+                 <div>Bruno Wener de Sousa</div>
+                </div>
+                
+                
+                <div>augusto@gmail.com</div>
+                
+        </div>
+
+        <h1>Mentores</h1>
+
+        <div id="idContainerTabela" class="containerTabela">
+
+            <div id="idTopTabela" class="topTabela">
+
+                <div id="pesquisa" class="pesquisa">
+                    
+                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave"> <i class="fa-regular fa-magnifying-glass fa-sm"></i>
+                    
+                </div>
+
+                <div onclick="novoMembro()" id="idNewMentor" class="newMentor">
+                    
+                    <div id="Mentor">+</div>
+                    Novo Mentor
+                </div>
+            </div>
+
+            <table id="idBottomTabela" class="bottomTabela">
+                
+                <thead class="classThead">
+                  <tr id="trHead">
+                    <th>Nome </th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="idTrTbody" class="ClassTrTbody1" >
+                      <td>John Doe</td>
+                      <td>johndoe@example.com</td>
+                      <td>
+                        <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
+                        <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>
+                        
+                      </td>
+                    </tr>
+
+                    <tr id="idTrTbody" class="classTrTbody2">
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>
+                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           
+                        </td>
+                      </tr>
+
+                      <tr id="idTrTbody" class="classTrTbody1">
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>
+                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           
+                        </td>
+                      </tr>
+
+                      <tr id="idTrTbody" class="classTrTbody2">
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>
+                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           
+                        </td>
+                      </tr>
+               
+            </table>
+
+            
+
+                
+                  
+            
+
+        </div>
+
+
+        
+
+    </div>
+</body>
+</html>
