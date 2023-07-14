@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pag Mentores 1</title>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
@@ -22,25 +23,25 @@
 
             <div id="idMenuMentores" class="MenuMentores">
                 <i class="fa-regular fa-user fa-2xl"></i>
-                <div id="mentores">Mentorea</div>
+                <div id="mentores" onclick="mudarPagina()">Mentores</div>
             </div>
 
             <div id="idMenuMentorias" class="MenuMentorias">
                 <i class="fa-solid fa-chalkboard fa-2xl"></i>
-                <div id="mentorias">Mentorias</div>
+                <div id="mentorias" onclick="mudarPagina()" >Mentorias</div>
 
             </div>
 
             <div id="idMenuTurmas" class="MenuTurmas">
 
                 <i class="fa-regular fa-circle-play fa-2xl"></i>
-                <div id="turmas">Turmas</div>
+                <div id="turmas" onclick="mudarPagina()">Turmas</div>
             </div>
 
             <div id="idAlunos" class="MenuAlunos">
 
                 <i class="fa-solid fa-users fa-2xl"></i>
-                <div id="alunos">Alunos</div>
+                <div id="alunos" onclick="mudarPagina()">Alunos</div>
 
             </div>
             
@@ -67,7 +68,8 @@
 
                 <div id="pesquisa" class="pesquisa">
                     
-                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave"> <i class="fa-regular fa-magnifying-glass fa-sm"></i>
+                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave">
+                    <span onclick="pesquisar()" class="material-symbols-outlined">search</span>
                     
                 </div>
 
@@ -93,8 +95,12 @@
                       <td>John Doe</td>
                       <td>johndoe@example.com</td>
                       <td>
-                        <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
-                        <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>
+                        <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
+                            edit
+                            </span></button>
+                        <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
+                            delete_forever
+                            </span></button>
                         
                       </td>
                     </tr>
@@ -103,8 +109,12 @@
                         <td>Jane Smith</td>
                         <td>janesmith@example.com</td>
                         <td>
-                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
+                            edit
+                            </span></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
+                                delete_forever
+                                </span></button>                            
                            
                         </td>
                       </tr>
@@ -113,8 +123,12 @@
                         <td>Jane Smith</td>
                         <td>janesmith@example.com</td>
                         <td>
-                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
+                            edit
+                            </span></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
+                                delete_forever
+                                </span></button>                            
                            
                         </td>
                       </tr>
@@ -123,8 +137,12 @@
                         <td>Jane Smith</td>
                         <td>janesmith@example.com</td>
                         <td>
-                           <button class="editarButtom" onclick="editar()"> <i class="fa-regular fa-pen fa-sm"></i></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><i class="fa-regular fa-trash fa-sm"></i></button>                            
+                           <button class="editarButtom" onclick="editar()"><span class="material-symbols-outlined">
+                            edit
+                            </span></button>
+                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
+                                delete_forever
+                                </span></button>                            
                            
                         </td>
                       </tr>
