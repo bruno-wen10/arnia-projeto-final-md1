@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pag New Mentores 2</title>
-    
+    <title>Pag Mentorias 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     
 </head>
 
@@ -22,12 +23,12 @@
 
             <div id="idMenuMentores" class="MenuMentores">
                 <i class="fa-regular fa-user fa-2xl"></i>
-                <div id="mentodsfres" onclick="mudarPagina()">Mentores</div>
+                <div id="mentores" onclick="mudarPagina()">Mentores</div>
             </div>
 
             <div id="idMenuMentorias" class="MenuMentorias">
                 <i class="fa-solid fa-chalkboard fa-2xl"></i>
-                <div id="mentorias" onclick="mudarPagina()">Mentorias</div>
+                <div id="mentorias" onclick="mudarPagina()" >Mentorias</div>
 
             </div>
 
@@ -59,46 +60,52 @@
                 
         </div>
 
-        <div class="novoMembro">
-            
-            <i onclick="addNewMembro()" class="fa-solid fa-circle-arrow-left fa-2xl" style="color: rgba(99, 99, 99, 0.178);"></i>
-            <h1>Novo Mentor</h1>
-        </div>
+        <h1>Mentorias</h1>
 
         <div id="idContainerTabela" class="containerTabela">
 
-            <div class="dados">
-                <span onclick="dados()" >Dados</span> 
+            <div id="idTopTabela" class="topTabela">
+
+                <div id="pesquisa" class="pesquisa">
+                    
+                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave">
+                    <span onclick="pesquisar()" class="material-symbols-outlined">search</span>
+                    
+                </div>
+
+                <div onclick="novoMembro()" id="idNewMentor" class="newMentor">
+                    
+                    <div id="Mentor">+</div>
+                    Novo Mentoria
+                </div>
             </div>
-            <hr class="separator">
 
-            <div id="idInput's" class="Inputs">
+            <table id="idBottomTabela" class="bottomTabela">
+                
+                <thead class="classThead">
+                  
+                    <th>Titulo da mentoria</th>
+                    <th>Mentor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  
+                </thead>
 
-                <div id="idDivImput1" class="classDivInput">
+                <tbody id="idTbody" >
 
-                    <label for="Nome">Nome</label>
-                    <input type="text" name="Nome" class="labelInput" placeholder="Digite seu nome...">
+                </tbody>
                     
 
-                </div>
+                    
+               
+            </table>
 
-                <div id="idImput2" class="classDivInput">
-
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" class="labelInput" placeholder="Digite seu E-mail...">
-
-                </div>
-                
-
-            </div>
-
-            <div class="classDivButton">
-                <button onclick="salvar()">Salvar</button>
-            </div>
-         
-                         
-                
             
+
+                
+                  
+            
+
         </div>
 
 

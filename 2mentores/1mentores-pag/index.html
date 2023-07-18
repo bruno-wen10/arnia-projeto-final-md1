@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     
 </head>
 
@@ -83,69 +83,19 @@
             <table id="idBottomTabela" class="bottomTabela">
                 
                 <thead class="classThead">
-                  <tr id="trHead">
+                  
                     <th>Nome </th>
                     <th>Email</th>
                     <th>Ações</th>
-                  </tr>
+                  
                 </thead>
 
-                <tbody>
-                    <tr id="idTrTbody" class="ClassTrTbody1" >
-                      <td>John Doe</td>
-                      <td>johndoe@example.com</td>
-                      <td>
-                        <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
-                            edit
-                            </span></button>
-                        <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
-                            delete_forever
-                            </span></button>
-                        
-                      </td>
-                    </tr>
+                <tbody id="idTbody" >
 
-                    <tr id="idTrTbody" class="classTrTbody2">
-                        <td>Jane Smith</td>
-                        <td>janesmith@example.com</td>
-                        <td>
-                           <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
-                            edit
-                            </span></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
-                                delete_forever
-                                </span></button>                            
-                           
-                        </td>
-                      </tr>
+                </tbody>
+                    
 
-                      <tr id="idTrTbody" class="classTrTbody1">
-                        <td>Jane Smith</td>
-                        <td>janesmith@example.com</td>
-                        <td>
-                           <button class="editarButtom" onclick="editar()"> <span class="material-symbols-outlined">
-                            edit
-                            </span></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
-                                delete_forever
-                                </span></button>                            
-                           
-                        </td>
-                      </tr>
-
-                      <tr id="idTrTbody" class="classTrTbody2">
-                        <td>Jane Smith</td>
-                        <td>janesmith@example.com</td>
-                        <td>
-                           <button class="editarButtom" onclick="editar()"><span class="material-symbols-outlined">
-                            edit
-                            </span></button>
-                            <button class="buttomExcluir" onclick="deleteItem()"><span class="material-symbols-outlined">
-                                delete_forever
-                                </span></button>                            
-                           
-                        </td>
-                      </tr>
+                    
                
             </table>
 

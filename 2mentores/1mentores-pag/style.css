@@ -139,9 +139,11 @@ h1{
   border-radius: 16px;
   margin: 20px;
   border-collapse: collapse;
+  
    /*Não consegui arredondar as bordas com border radius*/ 
 }
 .classThead {
+  color: white;
   background-color: #482D83;  
 }
 #trHead{
@@ -150,8 +152,14 @@ h1{
  
 }
 .classTrTbody2{
+  
   background-color:rgba(99, 99, 99, 0.178);
 }
+tr:nth-child(odd) {
+
+  background: rgba(99, 99, 99, 0.178)
+}
+ 
 td{
   text-align: center;
   height: 40px;

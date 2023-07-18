@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.cabecalho > :nth-child(2){
+  text-align: right;
+  padding-right: 30px;
+  font-size: 16px;
+  color:  rgba(117, 117, 117, 1);
+
+}
+.cabecalho-Icone {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+.cabecalho > :nth-child(1){
+ color: rgba(72, 45, 131, 1);   
+}
+.cabecalho-Icone > :nth-child(2){
+color: rgba(33, 33, 33, 1) ;
+font-size: 20px;
+font-weight: 600;
+}
+  
+.classFraseMentor{
+  position: fixed;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  width: 280px; /* Largura desejada para a coluna */
+  background-color: rgba(72, 45, 131, 1);
+
+
+}
+img{
+  padding-top: 50px;
+  padding-left: 30px;
+}
+.MenuMentores {
+  display: flex;
+  align-items: center;   
+  gap: 25px;  
+  cursor: pointer;  
+  color: white;  
+  font-size: large;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+.MenuMentorias{
+  display: flex;
+  align-items: center;   
+  gap: 25px;   
+  cursor: pointer;  
+  color: white;
+  font-size: large;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.MenuTurmas{
+  display: flex;
+  align-items: center;   
+  gap: 25px;  
+  cursor: pointer;   
+  color: white;
+  font-size: large;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.MenuAlunos{
+  display: flex;
+  align-items: center;   
+  gap: 25px;    
+  cursor: pointer; 
+  color: white;
+  font-size: large;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+h1{  
+  margin-left: 300px;
+}
+.containerTabela{
+ display: flex;
+  flex-direction: column;
+  border: none ;
+  border-radius: 24px;
+  box-shadow: 0px 0px 25px 0px #75757533;
+  margin-left: 300px ;
+  margin-right: 30px;
+}
+.topTabela{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;  
+}
+.pesquisa{
+   position: relative;
+}
+.pesquisa input {
+  padding-right: 30px; /* Espaçamento para o ícone */  
+  border: none;
+  width: 271px;
+  height: 56px;
+  border-radius: 16px;  
+  padding-left: 10px;
+  box-shadow: 0px 0px 7px 0px #08080831;
+  
+
+}
+.pesquisa span {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Posição do ícone */
+  transform: translateY(-40%);
+  cursor: pointer;
+}
+.newMentor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  width: 271px;
+  height: 56px;
+  background-color: #00C247 ;
+  color: white;
+  cursor: pointer;
+}
+#Mentor{
+  font-size: 18px;
+}
+.bottomTabela{
+  border-radius: 16px;
+  margin: 20px;
+  border-collapse: collapse;
+   /*Não consegui arredondar as bordas com border radius*/ 
+}
+.classThead {
+  background-color: #482D83; 
+  color: white; 
+  font-size: 16px;
+}
+#trHead{
+  color: white;
+  
+ 
+}
+.classTrTbody2{
+  background-color:rgba(99, 99, 99, 0.178);
+}
+tr:nth-child(odd) {
+  background: rgba(99, 99, 99, 0.178)
+}
+ 
+td{
+  text-align: center;
+  height: 40px;
+}
+
+.editarButtom{
+  border: none;
+  color: blue;
+  height: 0;
+}
+.buttomExcluir{
+  border: none;
+  color: red;
+  height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
