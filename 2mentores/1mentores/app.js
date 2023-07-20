@@ -46,13 +46,25 @@
 
     
  }
+
 getAPI() //Chamndo a função que busca na API os dados do OBJ
 
-//Função P/ editar mentores -- Redireciona para pagina novo mentor 
 
+
+
+//Função P/ editar mentores -- Redireciona para pagina novo mentor
 const  editarMentor = (id) =>{
     window.location = `../2new-mentores/index.html?id=${id}`
 } 
+
+
+
+
+
+//Função para Deletar mentor 
+const excluirMentor = (excluirID) =>{
+    
+}
 
 
 

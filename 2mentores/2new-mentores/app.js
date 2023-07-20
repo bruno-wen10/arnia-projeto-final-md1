@@ -41,31 +41,40 @@ getFormulario.addEventListener('submit', (e)=>{
 
 })
 
-const mentorId = null // variavel para armazenar o id do mentor que será editado
 
-// O URLSearchParams permite analisar e manipular os parâmetros de uma URL.
-// Nesse caso, capturamos o valor do parâmetro id com o get
+
+
+// CÓDIGO DE EDIÇÃO 
+
+
+
+/*const FormularioEdit = document.getElementById('idInputs')
+
+let mentorId = null 
+
 const getParamURl = () => {
     console.log(window.location)
-    const ParamentroString = window.location.search // search consulta/acessa o paramentro passado na url depois do ponto de interrogação "?" // Obtém a string de consulta da URL atual
-    const params = new URLSearchParams(ParamentroString) // Cria uma instância de URLSearchParams
-    mentorId = params.get('id')
+    const ParamentroString = window.location.search 
+    const params = new URLSearchParams(ParamentroString) 
+    const id = params.get('id')
 }
-const buscarMentor = async () => {
+
+const buscarMentor = async (id) => {
     try{
-        const buscarmentorResponse = await fetch(`http://localhost:4000/mentorias/${mentorId}`)
+        const buscarmentorResponse = await fetch(`http://localhost:4000/mentores/${id}`)
         const transformaJson = await buscarmentorResponse.json()
         return transformaJson
     } catch (error){
         console.error(error)
     }
 }
+
 const editarMentorPut = async (mentor) =>{
     try{
         const apiEditResponse = await fetch(`http://localhost:4000/mentores/${mentorId}`, {
             method: 'PUT',
             headers:{
-                'Accept': 'aplication/json, text/plain, */*',
+                'Accept': 'aplication/json, text/plain, */ /**',
                 'Content-Type': 'aplication/json'
             },
             body: JSON.stringify(mentor)            
@@ -77,6 +86,36 @@ const editarMentorPut = async (mentor) =>{
         console.error(error)
     }
 }
+
+const carregarMentorFormulario = (mentor) =>{
+    document.getElementById('nome').value = mentor.nome
+    document.getElementById('email').value = mentor.email
+}
+
+const carregarDados = async () =>{
+    getParamURl()
+    const mentorEditado = await buscarMentor()
+    carregarMentorFormulario(mentorEditado)
+
+}
+
+FormularioEdit.addEventListener('submit', (evento) =>{
+    
+    evento.preventDefault()
+    const nomeEditado = FormularioEdit.elements['nome'].value
+    const emailEditado = FormularioEdit.elements['email'].value
+
+    const nomeEmailEditado = {
+        nomeEditado,
+        emailEditado
+    }
+      editarMentorPut(nomeEmailEditado)
+ })*/
+
+
+
+ // CÓDIGO DE REDIRECIONAMENTO DE PAGINA 
+
 const voltarMentor = () =>{
     window.location = '../1mentores/index.html'
 }
