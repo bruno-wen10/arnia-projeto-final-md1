@@ -45,12 +45,11 @@ img{
     display: flex;
     align-items: center;   
     gap: 25px;    
-    color: white;
-    
-    
+    color: white;  
     font-size: large;
     padding-top: 100px;
     padding-left: 20px;
+    cursor: pointer; 
 }
 .MenuMentorias{
     display: flex;
@@ -60,6 +59,7 @@ img{
     font-size: large;
     padding-top: 50px;
     padding-left: 20px;
+    cursor: pointer; 
 }
 .MenuTurmas{
     display: flex;
@@ -69,6 +69,7 @@ img{
     font-size: large;
     padding-top: 50px;
     padding-left: 20px;
+    cursor: pointer;
 }
 .MenuAlunos{
     display: flex;
@@ -78,18 +79,17 @@ img{
     font-size: large;
     padding-top: 50px;
     padding-left: 20px;
+    cursor: pointer;
 }
 .novoMembro{ 
   display: flex;
   align-items: center; 
   gap: 10px;
-  margin-left: 300px;
+  margin-left: 300px;  
 }
-.novoMembro > :nth-child(1){
-  background-color: #d8d8d8af;
-  cursor: pointer;
+i{
+  cursor: pointer; 
 }
-
 .containerTabela{
   display: flex;
   flex-direction: column;
@@ -103,8 +103,7 @@ img{
 
 .dados{
   color: #482D83 ;
-  font-weight:lighter;
-  cursor: pointer;
+  font-weight:lighter;  
   padding-left: 30px;
   padding-top: 30px;
 }
@@ -123,19 +122,25 @@ img{
   padding-left: 30px;
     
 }
-label{
-  margin-left: 10px;
-}
-.labelInput{
- width: 250px;
- height: 40px;
- border-radius: 15px;
- border: 1px solid #A3A3A333 ;
- box-shadow: 0px 0px 25px 0px #A3A3A333;
- padding: 10px;
- 
+.classNomeEmail{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;  
+  padding-left: 30px;
+  
 }
 
+.labelInput{
+  width: 250px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid #A3A3A333 ;
+  box-shadow: 0px 0px 25px 0px #A3A3A333;
+  padding: 10px;
+  margin-left: 20px;
+  
+ }
+ 
 
 
 

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pag New Mentores 2</title>
+    <title>Pag Mentorias 1</title>
     
     <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
     
 </head>
 
@@ -22,7 +22,7 @@
 
             <div id="idMenuMentores" class="MenuMentores">
                 <i class="fa-regular fa-user fa-2xl"></i>
-                <div id="mentodsfres" onclick="mudarPaginaMentores()">Mentores</div>
+                <div id="mentores" onclick="mudarPaginaMentores()">Mentores</div>
             </div>
 
             <div id="idMenuMentorias" class="MenuMentorias">
@@ -55,46 +55,51 @@
                 </div>
                 
                 
-                <div>augusto@gmail.com</div>
+                <div>bruno.wener.git@gmail.com</div>
                 
         </div>
 
         <div class="novoMembro">
             
             <i onclick="voltarMentor()" class="fa-solid fa-circle-arrow-left fa-2xl" style="color: rgba(99, 99, 99, 0.178);"></i>
-            <h1>Novo Mentor</h1>
+            <h1>Mentor</h1>
         </div>
 
         <div id="idContainerTabela" class="containerTabela">
 
             <div class="dados">
-                <span onclick="dados()" >Dados</span> 
+                <span>Dados</span> 
             </div>
             <hr class="separator">
 
-            <form id="idInputs" class="Inputs">
+            <div id="idInputs" class="Inputs">
 
-                <div id="idDivImput1" class="classDivInput">
+                
 
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" class="labelInput" placeholder="Digite seu nome...">
-                    
+                <div>
+                    <div id="idNome" class="classNomeEmail">
+                        Nome
+                    </div>
 
+                    <div class="labelInput">
+                        
+                    </div>
                 </div>
 
-                <div id="idImput2" class="classDivInput">
+                <div>
+                    <div id="idEmail" class="classNomeEmail">
+                        E-mail
+                    </div>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" class="labelInput" placeholder="Digite seu E-mail...">
-
+                    <div class="labelInput">
+                        
+                    </div>
                 </div>
                 
 
-            </form>
-
-            <div class="classDivButton">
-                <button type="submit" >Salvar</button>
             </div>
+
+            
          
                          
                 

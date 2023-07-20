@@ -46,3 +46,13 @@ getAPI()
 const novoMembro = () =>{
     window.location.href = '../2new-mentores-pag/index.html'
 }
+
+const mudarPaginaMentorias = () =>{
+    
+}
+const mudarPaginaTurmas = () =>{
+
+}
+const mudarPaginaAlunos = () =>{
+    
+}
