@@ -1,7 +1,7 @@
  // Função GET -> Busca os dados da API 
  const getAPI = async ()=>{
     try{
-         const apiResponse = await fetch(`http://localhost:4000/mentores`)
+         const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores`)
 
          const retornoJson = await apiResponse.json()
 

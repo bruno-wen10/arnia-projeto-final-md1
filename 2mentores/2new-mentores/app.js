@@ -2,7 +2,7 @@
 const cadastrarNovoMentor = async (nomeEmail) =>{
     try{
 
-        const addApiPost = await fetch ('http://localhost:4000/mentores', {
+        const addApiPost = await fetch ('https://api-projeto-final-arnia.onrender.com/mentores', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -61,7 +61,7 @@ const getParamURl = () => {
 
 const buscarMentor = async (id) => {
     try{
-        const buscarmentorResponse = await fetch(`http://localhost:4000/mentores/${id}`)
+        const buscarmentorResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${id}`)
         const transformaJson = await buscarmentorResponse.json()
         return transformaJson
     } catch (error){
@@ -71,7 +71,7 @@ const buscarMentor = async (id) => {
 
 const editarMentorPut = async (mentor) =>{
     try{
-        const apiEditResponse = await fetch(`http://localhost:4000/mentores/${mentorId}`, {
+        const apiEditResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${mentorId}`, {
             method: 'PUT',
             headers:{
                 'Accept': 'aplication/json, text/plain, */ /**',

@@ -10,7 +10,7 @@ const recuperarIdPessoa = () =>{
 }
 
 const buscarApi = async (id) => {
-    const apiResponse = await fetch (`http://localhost:4000/mentores/${id}`)
+    const apiResponse = await fetch (`https://api-projeto-final-arnia.onrender.com/mentores/${id}`)
     const returnPessoa = await apiResponse.json()
 
     return returnPessoa
@@ -25,7 +25,7 @@ const carregarDadosNoFormulario = (idPessoa) =>{
 
 const editarPessoaApi = async (id, pessoa) => {
     try{
-        await fetch(`http://localhost:4000/mentores/${id}`, {
+        await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
