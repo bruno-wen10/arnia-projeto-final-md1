@@ -1,7 +1,7 @@
  // Função GET -> Busca os dados da API 
  const getAPI = async ()=>{
     try{
-         const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores`)
+         const apiResponse = await fetch(`http://localhost:4000/mentores`)
 
          const retornoJson = await apiResponse.json()
 
@@ -26,7 +26,7 @@
                       <td>${item.email}</td>
                       <td>
 
-                        <button id="idButtonEdit" class="editarButtom" onclick="editarMentor()">
+                        <button id="idButtonEdit" class="editarButtom" onclick="editarMentor(${item.id})">
 
                             <span class="material-symbols-outlined">edit</span>
                         </button>
@@ -54,7 +54,7 @@ getAPI() //Chamndo a função que busca na API os dados do OBJ
 
 //Função P/ editar mentores -- Redireciona para pagina novo mentor
 const  editarMentor = (id) =>{
-    window.location = `../2new-mentores/index.html?id=${id}`
+    window.location = `../2new-mentores/editar.html?id=${id}`
 } 
 
 

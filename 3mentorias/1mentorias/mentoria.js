@@ -1,6 +1,6 @@
  const getAPI = async ()=>{
     try{
-         const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores`)
+         const apiResponse = await fetch(`http://localhost:4000/`)
 
          const retornoJson = await apiResponse.json()
 

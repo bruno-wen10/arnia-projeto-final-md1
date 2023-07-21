@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pag Mentores 1</title> 
-     
-    <!-- Link icones google -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Pag New Mentores 2</title>  
+    
 
     <!-- Link fonte google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +15,9 @@
 
     <!-- Link CSS -->   
     <link rel="stylesheet" href="style.css">
-
-    <!-- Link JavaScript -->   
-    <script src="app.js" defer></script>
-    
-    
+   
+    <!-- Link Editar JavaScript -->
+    <script src="editar.js" defer></script>
     
 </head>
 
@@ -34,25 +30,25 @@
 
             <div id="idMenuMentores" class="MenuMentores">
                 <i class="fa-regular fa-user fa-2xl"></i>
-                <div id="mentores" onclick="mudarPagina()">Mentores</div>
+                <div id="mentodsfres" onclick="mudarPaginaMentores()">Mentores</div>
             </div>
 
             <div id="idMenuMentorias" class="MenuMentorias">
                 <i class="fa-solid fa-chalkboard fa-2xl"></i>
-                <div id="mentorias" onclick="mudarPagina()" >Mentorias</div>
+                <div id="mentorias" onclick="mudarPaginaMentorias()">Mentorias</div>
 
             </div>
 
             <div id="idMenuTurmas" class="MenuTurmas">
 
                 <i class="fa-regular fa-circle-play fa-2xl"></i>
-                <div id="turmas" onclick="mudarPagina()">Turmas</div>
+                <div id="turmas" onclick="mudarPaginaTurmas()">Turmas</div>
             </div>
 
             <div id="idAlunos" class="MenuAlunos">
 
                 <i class="fa-solid fa-users fa-2xl"></i>
-                <div id="alunos" onclick="mudarPagina()">Alunos</div>
+                <div id="alunos" onclick="mudarPaginaAlunos()">Alunos</div>
 
             </div>
             
@@ -71,51 +67,47 @@
                 
         </div>
 
-        <h1>Mentores</h1>
+        <div class="novoMembro">
+            
+            <i onclick="voltarMentor()" class="fa-solid fa-circle-arrow-left fa-2xl" style="color: rgba(99, 99, 99, 0.178);"></i>
+            <h1>Novo Mentor</h1>
+        </div>
 
         <div id="idContainerTabela" class="containerTabela">
 
-            <div id="idTopTabela" class="topTabela">
-
-                <div id="pesquisa" class="pesquisa">
-                    
-                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave">
-                    <span onclick="pesquisar()" class="material-symbols-outlined">search</span>
-                    
-                </div>
-
-                <div onclick="novoMembro()" id="idNewMentor" class="newMentor">
-                    
-                    <div id="Mentor">+</div>
-                    Novo Mentor
-                </div>
+            <div class="dados">
+                <span onclick="dados()" >Dados</span> 
             </div>
+            <hr class="separator">
 
-            <table id="idBottomTabela" class="bottomTabela">
-                
-                <thead class="classThead">
-                  
-                    <th>Nome </th>
-                    <th>Email</th>
-                    <th>Ações</th>
-                  
-                </thead>
+            <form id="idInputs" class="Inputs">
 
-                <tbody id="idTbody" >
+                <section id="idDivImput1" class="classDivInput">
 
-                </tbody>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="labelInput" placeholder="Digite seu nome...">
                     
 
-                    
-               
-            </table>
+                </section>
 
-            
+                <section id="idImput2" class="classDivInput">
 
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="labelInput" placeholder="Digite seu E-mail..." id="email">
+
+                </section>
+
+                <div  class="classDivButton">
+                <button type="submit" >Salvar</button>
+                </div>
                 
-                  
-            
 
+            </form>
+
+            
+                         
+                
+            
         </div>
 
 

@@ -2,7 +2,7 @@
 const cadastrarNovoMentor = async (nomeEmail) =>{
     try{
 
-        const addApiPost = await fetch ('https://api-projeto-final-arnia.onrender.com/mentores', {
+        const addApiPost = await fetch ('http://localhost:4000/mentores', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -44,73 +44,6 @@ getFormulario.addEventListener('submit', (e)=>{
 
 
 
-// CÓDIGO DE EDIÇÃO 
-
-
-
-/*const FormularioEdit = document.getElementById('idInputs')
-
-let mentorId = null 
-
-const getParamURl = () => {
-    console.log(window.location)
-    const ParamentroString = window.location.search 
-    const params = new URLSearchParams(ParamentroString) 
-    const id = params.get('id')
-}
-
-const buscarMentor = async (id) => {
-    try{
-        const buscarmentorResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${id}`)
-        const transformaJson = await buscarmentorResponse.json()
-        return transformaJson
-    } catch (error){
-        console.error(error)
-    }
-}
-
-const editarMentorPut = async (mentor) =>{
-    try{
-        const apiEditResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${mentorId}`, {
-            method: 'PUT',
-            headers:{
-                'Accept': 'aplication/json, text/plain, */ /**',
-                'Content-Type': 'aplication/json'
-            },
-            body: JSON.stringify(mentor)            
-        })
-        window.location = '../1mentores/index.html'
-
-
-    } catch (error){
-        console.error(error)
-    }
-}
-
-const carregarMentorFormulario = (mentor) =>{
-    document.getElementById('nome').value = mentor.nome
-    document.getElementById('email').value = mentor.email
-}
-
-const carregarDados = async () =>{
-    getParamURl()
-    const mentorEditado = await buscarMentor()
-    carregarMentorFormulario(mentorEditado)
-
-}
-
-FormularioEdit.addEventListener('submit', (evento) =>{
-    
-    evento.preventDefault()
-    const nomeEditado = FormularioEdit.elements['nome'].value
-    const emailEditado = FormularioEdit.elements['email'].value
-
-    const nomeEmailEditado = {
-        nomeEditado,
-        emailEditado
-    }
-      editarMentorPut(nomeEmailEditado)
- })*/
 
 
 
