@@ -12,6 +12,8 @@
         console.error(error)
     }
  }
+
+
  //Função Para Mostrar os dados da API na tela HTML
  const mostrarmentores = (param) =>{
 
@@ -58,9 +60,6 @@ const  editarMentor = (id) =>{
 } 
 
 
-
-
-
 //Função para Deletar mentor 
 const excluirMentor =  async (excluirMentorId) =>{
     try{
@@ -78,6 +77,70 @@ const excluirMentor =  async (excluirMentorId) =>{
     }
     
 }
+
+//Função Para Pesquisar Mentores 
+const idEnter = document.getElementById('idEnter');
+        const idInputPesquisar = document.getElementById('idInputPesquisar');
+
+        // Adicione o evento "keydown" ao campo de pesquisa
+        idInputPesquisar.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                // Chame a função realizarPesquisa quando a tecla "Enter" for pressionada
+                const valorPesquisar = idInputPesquisar.value;
+                realizarPesquisa(valorPesquisar);
+            }
+        });
+
+        idEnter.addEventListener('click', () => {
+            // Chame a função realizarPesquisa quando o botão for clicado
+            const valorPesquisar = idInputPesquisar.value;
+            realizarPesquisa(valorPesquisar);
+        });
+
+        const realizarPesquisa = async (termoPesquisar) => {
+            try {
+                const apiResponse = await fetch(`http://localhost:4000/mentores?q=${termoPesquisar}`);
+                const retornopesquisaApi = await apiResponse.json();
+                mostrarmentores(retornopesquisaApi);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        const mostrarmentores2 = (mentores) => {
+            // Aqui você pode exibir os resultados da pesquisa no HTML
+            const resultadoPesquisa = document.getElementById('resultadoPesquisa');
+            resultadoPesquisa.innerHTML = '';
+
+            mentores.forEach(mentor => {
+                const divMentor = document.createElement('div');
+                divMentor.textContent = mentor.nome;
+                resultadoPesquisa.appendChild(divMentor);
+            });
+        }
+
+/*const idEnter = document.getElementById('idEnter')
+
+idEnter.addEventListener('click', () =>{
+    const ValorPesquisar = document.getElementById('idInputPesquisar').value
+
+    realizarPesquisa(ValorPesquisar)
+})
+
+const realizarPesquisa = async (termoPesquisar) =>{
+    try{
+        const apiResponse = await fetch (`http://localhost:4000/mentores?q=${termoPesquisar}`)
+
+    const retornopesquisaApi = await apiResponse.json()
+
+    mostrarmentores (retornopesquisaApi)
+
+    } catch (error){
+        console.error(error)
+    }
+
+}*/
+
 
 
 
