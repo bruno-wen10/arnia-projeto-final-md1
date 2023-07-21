@@ -31,7 +31,7 @@
                             <span class="material-symbols-outlined">edit</span>
                         </button>
 
-                        <button class="buttomExcluir" onclick="excluirMentor()">
+                        <button class="buttomExcluir" onclick="excluirMentor(${item.id})">
                             <span class="material-symbols-outlined">delete_forever</span>
 
                         </button>
@@ -62,9 +62,24 @@ const  editarMentor = (id) =>{
 
 
 //Função para Deletar mentor 
-const excluirMentor = (excluirID) =>{
+const excluirMentor =  async (excluirMentorId) =>{
+    try{
+        await fetch (`http://localhost:4000/mentores/${excluirMentorId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }) 
+
+        getAPI()
+    } catch (error){
+        console.error(error)
+
+    }
     
 }
+
+
 
 
 

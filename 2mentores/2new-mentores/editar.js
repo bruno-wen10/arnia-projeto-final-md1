@@ -30,11 +30,11 @@ const editarPessoaApi = async (id, nomeEmail) => {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
-            'Content': 'application/json'
+            'Content-type': 'application/json'
         },
         body: JSON.stringify(nomeEmail)
     })
-    console.log(nomeEmail)   
+      
    
     
 
@@ -68,6 +68,8 @@ FormularioEdit.addEventListener('submit', async (e)=>{
     // 3- enviar dados para API
     
     await editarPessoaApi(mentorId, nomeEmail)
+
+    console.log(nomeEmail)
     
 
     //4- redirecionar para tela de Listagem de mentores
