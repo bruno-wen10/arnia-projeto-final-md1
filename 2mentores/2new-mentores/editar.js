@@ -71,7 +71,7 @@ FormularioEdit.addEventListener('submit', async (e)=>{
     
 
     //4- redirecionar para tela de Listagem de mentores
-    //window.location = '../1mentores/index.html' 
+    window.location = '../1mentores/index.html' 
 
 
 })
