@@ -16,10 +16,10 @@
     ></script>
 
     <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="new-mentoria.css" />
 
-    <!-- Link Editar JavaScript -->
-    <script src="editar.js" defer></script>
+    <!-- Link JavaScript -->
+    <script src="new-mentoria.js" defer></script>
   </head>
 
   <body>
@@ -59,47 +59,59 @@
 
       <div class="novoMembro">
         <i
-          onclick="voltarMentor()"
+          onclick="voltarMentoria()"
           class="fa-solid fa-circle-arrow-left fa-2xl"
           style="color: rgba(99, 99, 99, 0.178)"
         ></i>
-        <h1>Novo Mentor</h1>
+        <h1>Nova Mentoria</h1>
       </div>
 
       <div id="idContainerTabela" class="containerTabela">
         <div class="dados">
-          <span onclick="dados()">Dados</span>
+          <span>Dados</span>
         </div>
         <hr class="separator" />
 
-        <form id="idInputs" >
+        <form id="idInputs">
+
           <section class="Inputs">
+
             <section id="idDivImput1" class="classDivInput">
-              <label for="nome">Nome</label>
+              <label for="tituloMentoria">Titulo da Mentoria</label>
               <input
                 type="text"
-                id="nome"
-                name="nome"
+                id="tituloMentoria"
+                name="tituloMentoria"
                 class="labelInput"
-                placeholder="Digite seu nome..."
+                placeholder="Digite o titulo da Mentoria..."
               />
             </section>
-  
+
             <section id="idImput2" class="classDivInput">
-              <label for="email">E-mail</label>
-              <input
-                type="email"
-                name="email"
-                class="labelInput"
-                placeholder="Digite seu E-mail..."
-                id="email"
-              />
+              <label for="mentor">Mentor</label>
+              <select name="mentor" id="mentor" class="labelInput1">
+                  
+              </select>
             </section>
+          </section> 
+          
+          <section class="classStatus">
+
+            <div class="switch-Container">
+                <label for="statusChekbox">Status</label>
+               <div class="inputCheckbox">
+                <input type="checkbox" name="statusCheckbox" class="switch-OnOff"> <span>Ativo</span>
+               </div>
+            </div>            
           </section>
 
+          
+
           <div class="classDivButton">
-            <button type="submit">Salvar</button>
+            <button class="buttonSubmit" type="submit">Salvar</button>
           </div>
+          
+
         </form>
       </div>
     </div>

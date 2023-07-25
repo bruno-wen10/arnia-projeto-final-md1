@@ -1,115 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pag Mentores 1</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://kit.fontawesome.com/a67c8c6f5a.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    
-</head>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorias</title>
 
-<body>
+    <!-- Link icones google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Link fonte google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Link fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a67c8c6f5a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="mentoria.css" />
+
+    <!-- Link JavaScript -->
+    <script src="mentoria.js" defer></script>
+  </head>
+
+  <body>
     <div class="container">
+      <div id="idMentorClass" class="classFraseMentor">
+        <div><img src="mentorclass.png" alt="" /></div>
 
-        <div id="idMentorClass" class="classFraseMentor">
-
-            <div><img src="mentorclass.png" alt=""></div>
-
-            <div id="idMenuMentores" class="MenuMentores">
-                <i class="fa-regular fa-user fa-2xl"></i>
-                <div id="mentores" onclick="mudarPagina()">Mentores</div>
-            </div>
-
-            <div id="idMenuMentorias" class="MenuMentorias">
-                <i class="fa-solid fa-chalkboard fa-2xl"></i>
-                <div id="mentorias" onclick="mudarPagina()" >Mentorias</div>
-
-            </div>
-
-            <div id="idMenuTurmas" class="MenuTurmas">
-
-                <i class="fa-regular fa-circle-play fa-2xl"></i>
-                <div id="turmas" onclick="mudarPagina()">Turmas</div>
-            </div>
-
-            <div id="idAlunos" class="MenuAlunos">
-
-                <i class="fa-solid fa-users fa-2xl"></i>
-                <div id="alunos" onclick="mudarPagina()">Alunos</div>
-
-            </div>
-            
-
-        </div>  
-
-        <div id="idCabecalho" class="cabecalho">
-                                
-                <div class="cabecalho-Icone">
-                 <i  class="fa-solid fa-circle-user fa-2xl"></i>
-                 <div>Bruno Wener de Sousa</div>
-                </div>
-                
-                
-                <div>bruno.wener.git@gmail.com</div>
-                
+        <div id="idMenuMentores" class="MenuMentores">
+          <i class="fa-regular fa-user fa-2xl"></i>
+          <div id="mentores" onclick="mudarPaginaMentores()">Mentores</div>
         </div>
 
-        <h1>Mentores</h1>
-
-        <div id="idContainerTabela" class="containerTabela">
-
-            <div id="idTopTabela" class="topTabela">
-
-                <div id="pesquisa" class="pesquisa">
-                    
-                    <input type="text" class="Classinput" placeholder="Pesquise uma palavra-chave">
-                    <span onclick="pesquisar()" class="material-symbols-outlined">search</span>
-                    
-                </div>
-
-                <div onclick="novoMembro()" id="idNewMentor" class="newMentor">
-                    
-                    <div id="Mentor">+</div>
-                    Novo Mentor
-                </div>
-            </div>
-
-            <table id="idBottomTabela" class="bottomTabela">
-                
-                <thead class="classThead">
-                  
-                    <th>Nome </th>
-                    <th>Email</th>
-                    <th>Ações</th>
-                  
-                </thead>
-
-                <tbody id="idTbody" >
-
-                </tbody>
-                    
-
-                    
-               
-            </table>
-
-            
-
-                
-                  
-            
-
+        <div id="idMenuMentorias" class="MenuMentorias">
+          <i class="fa-solid fa-chalkboard fa-2xl"></i>
+          <div id="mentorias" onclick="mudarPaginaMentorias()">Mentorias</div>
         </div>
 
+        <div id="idMenuTurmas" class="MenuTurmas">
+          <i class="fa-regular fa-circle-play fa-2xl"></i>
+          <div id="turmas" >Turmas</div>
+        </div>
 
-        
+        <div id="idAlunos" class="MenuAlunos">
+          <i class="fa-solid fa-users fa-2xl"></i>
+          <div id="alunos" >Alunos</div>
+        </div>
+      </div>
 
+      <div id="idCabecalho" class="cabecalho">
+        <div class="cabecalho-Icone">
+          <i class="fa-solid fa-circle-user fa-2xl"></i>
+          <div>Bruno Wener de Sousa</div>
+        </div>
+
+        <div>bruno.wener.git@gmail.com</div>
+      </div>
+
+      <h1>Mentorias</h1>
+
+      <div id="idContainerTabela" class="containerTabela">
+        <div id="idTopTabela" class="topTabela">
+          <div id="pesquisa" class="pesquisa">
+            <input
+              type="text"
+              class="Classinput"
+              placeholder="Pesquise uma palavra-chave"
+            />
+            <span onclick="pesquisar()" class="material-symbols-outlined"
+              >search</span
+            >
+          </div>
+
+          <div onclick="newMentoria()" id="idNewMentoria" class="NewMentoria">
+            <div id="Mentoria">+</div>
+            Nova Mentoria
+          </div>
+        </div>
+
+        <table id="idBottomTabela" class="bottomTabela">
+          <thead class="classThead">
+            <th>Titulo da Mentoria</th>
+            <th>Mentor</th>
+            <th>status</th>
+            <th>Ações</th>
+          </thead>
+
+          <tbody id="idTbody">
+            <span onlo></span>
+          </tbody>
+        </table>
+      </div>
     </div>
-</body>
+  </body>
 </html>

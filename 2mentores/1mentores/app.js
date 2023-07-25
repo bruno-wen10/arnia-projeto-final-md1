@@ -1,29 +1,26 @@
- // Função GET -> Busca os dados da API 
- const getAPI = async ()=>{
-    try{
-         const apiResponse = await fetch(`http://localhost:4000/mentores`)
+// Função GET -> Busca os dados da API
+const getAPI = async () => {
+  try {
+    const apiResponse = await fetch(`http://localhost:4000/mentores`);
 
-         const retornoJson = await apiResponse.json()
+    const retornoJson = await apiResponse.json();
 
-         console.log(retornoJson)
-         mostrarmentores(retornoJson) //Chamando a Função p/ mostar os mentores na pag HTML -- O paramentro passado está vindo da API pelo metodo GET
+    console.log(retornoJson);
+    mostrarmentores(retornoJson); //Chamando a Função p/ mostar os mentores na pag HTML -- O paramentro passado está vindo da API pelo metodo GET
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-    }catch (error) {
-        console.error(error)
-    }
- }
+//Função Para Mostrar os dados da API na tela HTML
+const mostrarmentores = (param) => {
+  const tbody = document.getElementById("idTbody");
+  tbody.innerHTML = ''
 
+  param.forEach((item) => {
+    const mentoresHtml = `
 
- //Função Para Mostrar os dados da API na tela HTML
- const mostrarmentores = (param) =>{
-
-    const tbody = document.getElementById('idTbody')
-
-    param.forEach((item) => {
-
-        const mentoresHtml = `
-
-        <tr id="idTrTbody"  >
+        <tr id="idTrTbody" >
                       <td>${item.nome}</td>
                       <td>${item.email}</td>
                       <td>
@@ -40,122 +37,68 @@
                         
                       </td>
 
-                    </tr>`
-                    
-                    tbody.innerHTML = tbody.innerHTML + mentoresHtml
+                    </tr>`;
 
-    });
+    tbody.innerHTML = tbody.innerHTML + mentoresHtml;
+  });
+};
 
-    
- }
-
-getAPI() //Chamndo a função que busca na API os dados do OBJ
-
-
-
+getAPI(); //Chamndo a função que busca na API os dados do OBJ
 
 //Função P/ editar mentores -- Redireciona para pagina novo mentor
-const  editarMentor = (id) =>{
-    window.location = `../2new-mentores/editar.html?id=${id}`
-} 
+const editarMentor = (id) => {
+  window.location = `../2new-mentores/editar.html?id=${id}`;
+};
 
+//Função para Deletar mentor
+const excluirMentor = async (excluirMentorId) => {
+  try {
+    await fetch(`http://localhost:4000/mentores/${excluirMentorId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-//Função para Deletar mentor 
-const excluirMentor =  async (excluirMentorId) =>{
-    try{
-        await fetch (`http://localhost:4000/mentores/${excluirMentorId}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }) 
+    getAPI();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-        getAPI()
-    } catch (error){
-        console.error(error)
+//Função Para Pesquisar Mentores
+const idEnter = document.getElementById("idEnter");
+const idInputPesquisar = document.getElementById("idInputPesquisar");
 
-    }
-    
-}
+idInputPesquisar.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    const valorPesquisar = idInputPesquisar.value;
+    realizarPesquisa(valorPesquisar);
+  }
+});
 
-//Função Para Pesquisar Mentores 
-const idEnter = document.getElementById('idEnter');
-        const idInputPesquisar = document.getElementById('idInputPesquisar');
+idEnter.addEventListener("click", () => {
+  const valorPesquisar = idInputPesquisar.value;
+  realizarPesquisa(valorPesquisar);
+});
 
-        // Adicione o evento "keydown" ao campo de pesquisa
-        idInputPesquisar.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                // Chame a função realizarPesquisa quando a tecla "Enter" for pressionada
-                const valorPesquisar = idInputPesquisar.value;
-                realizarPesquisa(valorPesquisar);
-            }
-        });
+const realizarPesquisa = async (termoPesquisar) => {
+  try {
+    const apiResponse = await fetch(
+      `http://localhost:4000/mentores?q=${termoPesquisar}`
+    );
+    const retornopesquisaApi = await apiResponse.json();
+    mostrarmentores(retornopesquisaApi);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-        idEnter.addEventListener('click', () => {
-            // Chame a função realizarPesquisa quando o botão for clicado
-            const valorPesquisar = idInputPesquisar.value;
-            realizarPesquisa(valorPesquisar);
-        });
+const novoMembro = () => {
+  window.location = "../2new-mentores/index.html";
+};
 
-        const realizarPesquisa = async (termoPesquisar) => {
-            try {
-                const apiResponse = await fetch(`http://localhost:4000/mentores?q=${termoPesquisar}`);
-                const retornopesquisaApi = await apiResponse.json();
-                mostrarmentores(retornopesquisaApi);
-            } catch (error) {
-                console.error(error);
-            }
-        }
+const mudarPaginaMentorias = () => {
+  window.location = "../../3mentorias/1mentorias/mentoria.html"
+};
 
-        const mostrarmentores2 = (mentores) => {
-            // Aqui você pode exibir os resultados da pesquisa no HTML
-            const resultadoPesquisa = document.getElementById('resultadoPesquisa');
-            resultadoPesquisa.innerHTML = '';
-
-            mentores.forEach(mentor => {
-                const divMentor = document.createElement('div');
-                divMentor.textContent = mentor.nome;
-                resultadoPesquisa.appendChild(divMentor);
-            });
-        }
-
-/*const idEnter = document.getElementById('idEnter')
-
-idEnter.addEventListener('click', () =>{
-    const ValorPesquisar = document.getElementById('idInputPesquisar').value
-
-    realizarPesquisa(ValorPesquisar)
-})
-
-const realizarPesquisa = async (termoPesquisar) =>{
-    try{
-        const apiResponse = await fetch (`http://localhost:4000/mentores?q=${termoPesquisar}`)
-
-    const retornopesquisaApi = await apiResponse.json()
-
-    mostrarmentores (retornopesquisaApi)
-
-    } catch (error){
-        console.error(error)
-    }
-
-}*/
-
-
-
-
-
-
-const novoMembro = () =>{
-    window.location.href = '../2new-mentores/index.html'
-}
-
-const mudarPaginaMentorias = () =>{
-    
-}
-const mudarPaginaTurmas = () =>{
-
-}
-const mudarPaginaAlunos = () =>{
-    
-}
