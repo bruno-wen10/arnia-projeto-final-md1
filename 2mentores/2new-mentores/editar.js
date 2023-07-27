@@ -1,3 +1,4 @@
+// CÓDIGO DE EDIÇÃO
 let mentorId = null;
 const FormularioEdit = document.getElementById("idInputs");
 
@@ -69,6 +70,8 @@ FormularioEdit.addEventListener("submit", async (e) => {
 
 carregarDadosEditar();
 
+// CÓDIGO DE REDIRECIONAMENTO DE PAGINA
+
 const voltarMentor = () => {
   window.location = "../1mentores/index.html";
 };
@@ -81,8 +84,6 @@ const mudarPaginaMentores = () => {
 const mudarPaginaMentorias = () => {
   window.location = "../../3mentorias/1mentorias/mentoria.html"
 };
-const mudarPaginaTurmas = () => {};
-const mudarPaginaAlunos = () => {}; 
 
-// CÓDIGO DE EDIÇÃO
+
 

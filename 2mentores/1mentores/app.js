@@ -94,6 +94,8 @@ const realizarPesquisa = async (termoPesquisar) => {
   }
 };
 
+
+
 const novoMembro = () => {
   window.location = "../2new-mentores/index.html";
 };

@@ -21,7 +21,7 @@ getForm.addEventListener("submit", (e) => {
 
   const titulo = getForm.elements["tituloMentoria"].value;
   const mentor = getForm.elements["mentor"].value;
-  const status = getForm.elements['statusCheckbox'].value;
+  const status = getForm.elements["statusCheckbox"].checked;
 
   const objApiMentorias = {
     titulo,
@@ -49,20 +49,19 @@ const showOptionMentores = async () => {
 
 //FUNÇÃO PARA MOSTAR OPÇÕES DE MENTORES - METODO GET
 
-const showMentorias = (param) =>{
-  const getIdSelect = document.getElementById('mentor')
-  getIdSelect.innerHTML = ``
-  
-  param.forEach((element) => {
+const showMentorias = (param) => {
+  const getIdSelect = document.getElementById("mentor");
+  getIdSelect.innerHTML = ``;
 
+  param.forEach((element) => {
     const optionMentorHtml = `  
     <option value="${element.nome}">${element.nome}</option>
-    `
-    getIdSelect.innerHTML += optionMentorHtml   
+    `;
+    getIdSelect.innerHTML += optionMentorHtml;
   });
-  
-}
-showOptionMentores ()
+};
+showOptionMentores();
+
 
 // CÓDIGO DE REDIRECIONAMENTO DE PAGINA
 

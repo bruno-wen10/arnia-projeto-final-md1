@@ -24,11 +24,6 @@
       "nome": "Carlos",
       "email": "carlos@hotmail.com",
       "id": 10
-    },
-    {
-      "nome": "João Victor",
-      "email": "joao@gmail.com",
-      "id": 11
     }
   ],
   "mentorias": [
