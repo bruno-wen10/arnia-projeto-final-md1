@@ -15,7 +15,7 @@ const getAPI = async () => {
 //Função Para Mostrar os dados da API na tela HTML
 const mostrarmentores = (param) => {
   const tbody = document.getElementById("idTbody");
-  tbody.innerHTML = ''
+  tbody.innerHTML = "";
 
   param.forEach((item) => {
     const mentoresHtml = `
@@ -94,13 +94,10 @@ const realizarPesquisa = async (termoPesquisar) => {
   }
 };
 
-
-
 const novoMembro = () => {
   window.location = "../2new-mentores/index.html";
 };
 
 const mudarPaginaMentorias = () => {
-  window.location = "../../3mentorias/1mentorias/mentoria.html"
+  window.location = "../../3mentorias/1mentorias/mentoria.html";
 };
-
