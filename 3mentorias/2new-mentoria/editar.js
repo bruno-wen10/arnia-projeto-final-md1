@@ -58,12 +58,12 @@ const loadEditData = async () => {
 getForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const tituloMentoria = getForm.elements["tituloMentoria"].value;
+  const titulo = getForm.elements["tituloMentoria"].value;
   const mentor = getForm.elements["mentor"].value;
   const status = getForm.elements["statusCheckbox"].checked;
 
   const TituloMentorStatus = {
-    tituloMentoria,
+    titulo,
     mentor,
     status,
   };
