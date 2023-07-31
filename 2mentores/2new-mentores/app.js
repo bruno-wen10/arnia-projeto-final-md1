@@ -16,12 +16,14 @@ const cadastrarNovoMentor = async (nomeEmail) => {
   }
 };
 
+//Obtém o formulário com o ID "idInputs" usando document.getElementById.
 const getFormulario = document.getElementById("idInputs");
 
-getFormulario.addEventListener("submit", (e) => {
-  e.preventDefault();
+getFormulario.addEventListener("submit", (e) => {   //Adiciona um ouvinte de evento para o evento "submit" no formulário, ou seja, quando o formulário for enviado.
+  e.preventDefault();                                   //para evitar que a página seja recarregada quando o formulário é enviado.
+
   // elements // é utilizado em tag's form
-  const nome = getFormulario.elements["nome"].value;
+  const nome = getFormulario.elements["nome"].value;     //Obtém os valores dos campos de input do formulário usando 
   const email = getFormulario.elements["email"].value;
 
   // const com um objeto que guarda os valores dos INPUT's
@@ -40,9 +42,6 @@ getFormulario.addEventListener("submit", (e) => {
 
 const voltarMentor = () => {
   window.location = "../1mentores/index.html";
-};
-const dados = () => {
-  window.location = "../3mentorias/index.html";
 };
 const mudarPaginaMentores = () => {
   window.location = "../1mentores/index.html";
