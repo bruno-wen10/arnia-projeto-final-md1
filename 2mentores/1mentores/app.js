@@ -1,7 +1,7 @@
 // Função GET -> Busca os dados da API
 const getAPI = async () => {
   try {
-    const apiResponse = await fetch(`http://localhost:4000/mentores`);
+    const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com`);
 
     const retornoJson = await apiResponse.json();
 
@@ -53,7 +53,7 @@ const editarMentor = (id) => {
 //Função para Deletar mentor
 const excluirMentor = async (excluirMentorId) => {
   try {
-    await fetch(`http://localhost:4000/mentores/${excluirMentorId}`, {
+    await fetch(`https://api-projeto-final-arnia.onrender.com/${excluirMentorId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ idEnter.addEventListener("click", () => {
 const realizarPesquisa = async (termoPesquisar) => {
   try {
     const apiResponse = await fetch(
-      `http://localhost:4000/mentores?q=${termoPesquisar}`
+      `https://api-projeto-final-arnia.onrender.com?q=${termoPesquisar}`
     );
     const retornopesquisaApi = await apiResponse.json();
     mostrarmentores(retornopesquisaApi);

@@ -1,7 +1,7 @@
 // Função para novo cadastro -- Usando método POST para postar os novo mentor na API
 const cadastrarNovoMentor = async (nomeEmail) => {
   try {
-    const addApiPost = await fetch("http://localhost:4000/mentores", {
+    const addApiPost = await fetch("https://api-projeto-final-arnia.onrender.com", {
       method: "POST",
       headers: {
         'Accept': "application/json, text/plain, */*",

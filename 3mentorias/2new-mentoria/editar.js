@@ -10,7 +10,7 @@ const saveUrl = () => {
 };
 
 const fetchDateInApi = async (id) => {
-  const responseApi = await fetch(`http://localhost:4000/mentorias/${id}`);
+  const responseApi = await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`);
   const returnApi = await responseApi.json();
 
   return returnApi;
@@ -25,7 +25,7 @@ const showDataMentors = (retornoApi) => {
 
 const editMentorship = async (id, TituloMentorStatus) => {
   try{
-    const response = await fetch(`http://localhost:4000/mentorias/${id}`, {
+    const response = await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -86,7 +86,7 @@ loadEditData();
 
 const showOptionMentores = async() => {
   try{
-    const responseApi = await fetch(`http://localhost:4000/mentores`)
+    const responseApi = await fetch(`https://api-projeto-final-arnia.onrender.com`)
 
     const returnApi = await responseApi.json();
     console.log(returnApi);

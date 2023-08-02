@@ -1,4 +1,6 @@
 // CÓDIGO DE EDIÇÃO
+
+
 let mentorId = null;
 const FormularioEdit = document.getElementById("idInputs");
 
@@ -11,7 +13,7 @@ const recuperarIdNome = () => {
 };
 
 const buscarApi = async (id) => {
-  const apiResponse = await fetch(`http://localhost:4000/mentores/${id}`);
+  const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`);
   const returnPessoa = await apiResponse.json();
 
   return returnPessoa;
@@ -24,7 +26,7 @@ const carregarDadosNoFormulario = (idNome) => {
 };
 
 const editarPessoaApi = async (id, nomeEmail) => {
-  await fetch(`http://localhost:4000/mentores/${id}`, {
+  await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json, text/plain, */*",

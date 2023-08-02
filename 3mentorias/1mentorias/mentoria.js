@@ -1,7 +1,7 @@
 // Função GET -> Busca os dados da API
 const getMentoriasApi = async () => {
   try {
-    const apiResponse = await fetch(`http://localhost:4000/mentorias`);
+    const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com`);
     const retornoApi = await apiResponse.json();
 
     console.log(retornoApi);
@@ -18,6 +18,8 @@ const showMentorias = (param) => {
   getId.innerHTML = ``;
 
   param.forEach((item) => {
+
+    //Utilização do Operador Ternário
     const statusClass = item.status ? "statusAtivo" : "statusInativo";
 
     const status = item.status ? "Ativo" : "Inativo";
@@ -58,7 +60,7 @@ const editarMentoria = (id) => {
 //FUNÇÃO PARA DELETAR MENTOR
 const excluirMentoria = async (excluirMentoria) => {
   try {
-    await fetch(`http://localhost:4000/mentorias/${excluirMentoria}`, {
+    await fetch(`https://api-projeto-final-arnia.onrender.com/${excluirMentoria}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -89,7 +91,7 @@ idEnter.addEventListener("click", () => {
 const doResearch = async (termoPesquisar) => {
   try {
     const apiResponse = await fetch(
-      `http://localhost:4000/mentorias?q=${termoPesquisar}`
+      `https://api-projeto-final-arnia.onrender.com?q=${termoPesquisar}`
     );
     const retornopesquisaApi = await apiResponse.json();
     showMentorias(retornopesquisaApi);
