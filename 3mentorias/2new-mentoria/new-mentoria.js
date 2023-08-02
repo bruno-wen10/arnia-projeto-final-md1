@@ -1,6 +1,6 @@
 const registerMentoring = async (objApiMentorias) => {
   try {
-    const addApiPost = await fetch(`https://api-projeto-final-arnia.onrender.com`, {
+    const addApiPost = await fetch(`https://api-projeto-final-arnia.onrender.com/mentorias`, {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -37,7 +37,7 @@ getForm.addEventListener("submit", (e) => {
 
 const showOptionMentores = async () => {
   try {
-    const apiResponse = await fetch("https://api-projeto-final-arnia.onrender.com");
+    const apiResponse = await fetch("https://api-projeto-final-arnia.onrender.com/mentores");
 
     const returnApi = await apiResponse.json();
     console.log(returnApi);

@@ -13,7 +13,7 @@ const recuperarIdNome = () => {
 };
 
 const buscarApi = async (id) => {
-  const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`);
+  const apiResponse = await fetch(`https://api-projeto-final-arnia.onrender.com/mentores/${id}`);
   const returnPessoa = await apiResponse.json();
 
   return returnPessoa;
@@ -26,7 +26,7 @@ const carregarDadosNoFormulario = (idNome) => {
 };
 
 const editarPessoaApi = async (id, nomeEmail) => {
-  await fetch(`https://api-projeto-final-arnia.onrender.com/${id}`, {
+  await fetch(`https://api-projeto-final-arnia.onrender.com//mentores/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json, text/plain, */*",
